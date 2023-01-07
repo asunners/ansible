@@ -1,13 +1,11 @@
 all:
   hosts:
-    mail.example.com:  ansible_user=asunners
   children:
     webservers:
       hosts:
-        foo.example.com: ansible_user=asunners
-        bar.example.com:
-    dbservers:
+        10.1.1.239: ansible_user=asunners
+    dnsservers:
       hosts:
-        one.example.com:
-        two.example.com:
-        three.example.com:
+        10.1.1.217:
+        10.1.1.22:
+      
