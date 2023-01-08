@@ -1,0 +1,7 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install checkmk agent from server
+    ansible.builtin.apt:
+      deb: http://10.1.1.165/homelab/check_mk/agents/check-mk-agent_2.1.0p18-1_all.deb
