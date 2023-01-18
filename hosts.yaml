@@ -1,12 +1,25 @@
 all:
   hosts:
-    10.1.1.140: ansible_user=asunners
+    10.1.1.140:
   children:
     webservers:
       hosts:
-        10.1.1.239: ansible_user=asunners
+        10.1.1.239:
     dnsservers:
       hosts:
         10.1.1.217:
         10.1.1.22:
-      
+    docker:
+      hosts:
+        10.1.1.146:
+        10.1.1.165:
+        10.1.1.218:
+        10.1.1.225:
+    proxmox:
+      hosts:
+        10.1.1.145:
+          ansible_user: root
+        10.1.1.119:
+          ansible_user: root
+        10.1.1.127:
+          ansible_user: root
