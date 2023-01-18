@@ -23,3 +23,8 @@ all:
           ansible_user: root
         10.1.1.127:
           ansible_user: root
+    network:
+      hosts:
+        10.1.1.197:
+        10.1.1.223:
+        10.1.1.154:
